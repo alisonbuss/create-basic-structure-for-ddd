@@ -1,0 +1,103 @@
+{
+    "projects": [
+        {
+            "project": "ExampleUsersDDD",
+            "framework": "dotnet-core",
+            "output_path": "./outputs/ExampleUsersDDD",
+            "layers": [
+                {
+                    "layer": "1 - Presentation",
+                    "layer_path": "src/Presentation",
+                    "subprojects": [
+                        {
+                            "subproject": "ExampleUsersDDD.UI.Web",
+                            "type": "web",
+                            "folders": [
+                                "Public"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "layer": "2 - Services",
+                    "layer_path": "src/Services",
+                    "subprojects": [
+                        {
+                            "subproject": "ExampleUsersDDD.Service.API",
+                            "type": "webapi",
+                            "folders": [
+                                "Controllers"
+                            ]
+                        },
+                        {
+                            "subproject": "ExampleUsersDDD.Service.gRPC",
+                            "type": "grpc",
+                            "folders": []
+                        }
+                    ]
+                },
+                {
+                    "layer": "3 - Business",
+                    "layer_path": "src/Business",
+                    "subprojects": [
+                        {
+                            "subproject": "ExampleUsersDDD.Business",
+                            "type": "classlib",
+                            "folders": [
+                                "Dtos",
+                                "Interfaces"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "layer": "4 - Domain",
+                    "layer_path": "src/Domain",
+                    "subprojects": [
+                        {
+                            "subproject": "ExampleUsersDDD.Domain",
+                            "type": "classlib",
+                            "folders": [
+                                "Entities",
+                                "Enums",
+                                "Interfaces",
+                                "Interfaces/Repository",
+                                "Interfaces/Service",
+                                "Notifications",
+                                "Service"
+                                
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "layer": "5 - Infra",
+                    "layer_path": "src/Infra",
+                    "subprojects": [
+                        {
+                            "subproject": "ExampleUsersDDD.Infra.Data",
+                            "type": "classlib",
+                            "folders": [
+                                "Context",
+                                "EventSourcing",
+                                "Mappings",
+                                "Migrations",
+                                "Repository"
+                            ]
+                        },
+                        {
+                            "subproject": "ExampleUsersDDD.Infra.CrossCutting",
+                            "type": "classlib",
+                            "folders": [
+                                "Interfaces",
+                                "IoC",
+                                "Map"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "active": true
+        }
+    ]
+}
