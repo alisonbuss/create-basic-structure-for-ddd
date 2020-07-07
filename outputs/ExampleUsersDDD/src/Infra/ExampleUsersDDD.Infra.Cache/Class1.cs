@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExampleUsersDDD.Business
+namespace ExampleUsersDDD.Infra.Cache
 {
     public class Class1
     {

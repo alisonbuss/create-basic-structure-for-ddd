@@ -8,20 +8,20 @@ projects on a DDD(Domain-Driven Design) implementation model.
 
 The proposed model is:
 .
-├── ExampleUsersDDD.sln --> (Solution file)
+├── ExampleEmptyProjectDDD.sln --> (Solution file)
 └── src
     ├── 1 - Presentation
-    │   └── ExampleUsersDDD.UI.Web --> (ASP.NET Core Empty Web)
+    │   └── ExampleEmptyProjectDDD.UI.Web --> (ASP.NET Core Empty Web)
     ├── 2 - Services
-    │   ├── ExampleUsersDDD.Service.API --> (ASP.NET Core Web API)
-    │   └── ExampleUsersDDD.Service.gRPC --> (ASP.NET Core gRPC Service)
-    ├── 3 - Business
-    │   └── ExampleUsersDDD.Business --> (Class library)
+    │   ├── ExampleEmptyProjectDDD.Service.API --> (ASP.NET Core Web API)
+    │   └── ExampleEmptyProjectDDD.Service.gRPC --> (ASP.NET Core gRPC Service)
+    ├── 3 - Application
+    │   └── ExampleEmptyProjectDDD.Application --> (Class library)
     ├── 4 - Domain
-    │   └── ExampleUsersDDD.Domain --> (Class library)
+    │   └── ExampleEmptyProjectDDD.Domain --> (Class library)
     └── 5 - Infra
-        ├── ExampleUsersDDD.Infra.CrossCutting --> (Class library)
-        └── ExampleUsersDDD.Infra.Data --> (Class library)
+        ├── ExampleEmptyProjectDDD.Infra.CrossCutting --> (Class library)
+        └── ExampleEmptyProjectDDD.Infra.Data --> (Class library)
 
 Usage:  bash genesis.sh [OPTIONS]
 

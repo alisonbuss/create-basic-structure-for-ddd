@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace ExampleUsersDDD.UI.Web
+namespace ExampleEmptyProjectDDD.UI.Web
 {
     public class Startup
     {

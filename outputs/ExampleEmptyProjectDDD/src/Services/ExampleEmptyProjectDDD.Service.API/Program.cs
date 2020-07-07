@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace ExampleUsersDDD.UI.Web
+namespace ExampleEmptyProjectDDD.Service.API
 {
     public class Program
     {

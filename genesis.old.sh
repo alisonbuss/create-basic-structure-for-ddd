@@ -5,7 +5,6 @@ The genesis.sh is a simple Shell Script for creating .NET Core
 projects on a DDD(Domain-Driven Design) implementation model.
 
 The proposed model is:
-
 .
 ├── ExampleUsersDDD.sln --> (Solution file)
 └── src
@@ -21,18 +20,6 @@ The proposed model is:
     └── 4 - Infra
         ├── ExampleUsersDDD.Infra.CrossCutting --> (Class library)
         └── ExampleUsersDDD.Infra.Data --> (Class library)
-
-Layers:
-
-0 - Presentation: 
-
-1 - Services:
-
-2 - Business
-
-3 - Domain
-
-4 - Infra
 
 Usage:  bash genesis.sh [OPTIONS]
 
