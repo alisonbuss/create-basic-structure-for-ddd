@@ -32,7 +32,9 @@
                         {
                             "subproject": "ExampleEmptyProjectDDD.Service.gRPC",
                             "type": "grpc",
-                            "folders": []
+                            "folders": [
+                                "Services"
+                            ]
                         }
                     ]
                 },
@@ -112,14 +114,23 @@
                             "subproject": "ExampleUsersDDD.Service.API",
                             "type": "webapi",
                             "folders": [
-                                "Dtos",
-                                "Controllers",
-                                "Interfaces"
+                                "Controllers"
                             ]
                         },
                         {
                             "subproject": "ExampleUsersDDD.Service.gRPC",
                             "type": "grpc",
+                            "folders": [  ]
+                        }
+                    ]
+                },
+                {
+                    "layer": "2 - Application",
+                    "layer_path": "src/Application",
+                    "subprojects": [
+                        {
+                            "subproject": "ExampleUsersDDD.Application",
+                            "type": "classlib",
                             "folders": [
                                 "Dtos",
                                 "Interfaces"
@@ -128,7 +139,7 @@
                     ]
                 },
                 {
-                    "layer": "2 - Domain",
+                    "layer": "3 - Domain",
                     "layer_path": "src/Domain",
                     "subprojects": [
                         {
@@ -148,7 +159,7 @@
                     ]
                 },
                 {
-                    "layer": "3 - Infra",
+                    "layer": "4 - Infra",
                     "layer_path": "src/Infra",
                     "subprojects": [
                         {
