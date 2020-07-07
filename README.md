@@ -3,6 +3,10 @@
 
 # Script para criar estrutura básica para projetos DDD(Domain-Driven Design) em .Net Core.
 
+<p align="center">
+    <img src="https://github.com/alisonbuss/create-basic-structure-for-ddd/raw/master/files/print-01.png"/>
+</p>
+
 #### Status do Projeto: *(Em desenvolvimento)*.
 
 ### Projeto foi Inspirado:
