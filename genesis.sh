@@ -119,10 +119,11 @@ function fnStartGenesis {
     function fnAddProjectToSolution() {
         local solutionFile="$1";
         local projectFile="$2";
+        local solutionFolder="$3";
         
         echo -e "\n--> Adding the subproject(C#) to the solution's root project. \n";
 
-        dotnet sln "${solutionFile}" add "${projectFile}";
+        dotnet sln "${solutionFile}" add "${projectFile}" --solution-folder "${solutionFolder}";
     }
 
     function fnReadJsonFile() {
@@ -177,8 +178,10 @@ function fnStartGenesis {
                             };;
                         esac
 
-                        fnAddProjectToSolution "${projectPath}/${projectName}.sln" \
-                            "${projectPath}/${layerPath}/${subProjName}/${subProjName}.csproj";
+                        fnAddProjectToSolution \
+                            "${projectPath}/${projectName}.sln" \
+                            "${projectPath}/${layerPath}/${subProjName}/${subProjName}.csproj" \
+                            "${layerName}";
 
                         # Project -> Layers -> Sub Projects -> Folders
                         for (( d=1; d<=$foldersSize; d++ )); do
