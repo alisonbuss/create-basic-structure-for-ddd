@@ -126,14 +126,22 @@ function fnStartGenesis {
         dotnet sln "${solutionFile}" add "${projectFile}" --solution-folder "${solutionFolder}";
     }
 
+    function fnRestoreProject() {
+        local solutionFile="$1";
+        
+        echo -e "\n--> Restores the dependencies and tools of a project. \n";
+
+        dotnet restore "${solutionFile}";
+    }
+
     function fnReadJsonFile() {
         local jsonFile="$1";
 
         local startTime=$(date +'%H:%M:%S');
         local startDate=$(date -u -d "${startTime}" +"%s");
-        local projectsSize=$(cat "${jsonFile}" | $RUN_JQ ".projects | length");
 
         # Projects
+        local projectsSize=$(cat "${jsonFile}" | $RUN_JQ ".projects | length");
         for (( a=1; a<=$projectsSize; a++ )); do
             local projectIndex=$(($a-1));
             local projectActive=$(cat "${jsonFile}" | $RUN_JQ -r ".projects[${projectIndex}].active");
@@ -192,8 +200,10 @@ function fnStartGenesis {
                         done
                     done
                 done
+
+                fnRestoreProject "${projectPath}/${projectName}.sln";
             fi
-        done
+        done 
 
         local endTime=$(date +'%H:%M:%S');
         local endDate=$(date -u -d "${endTime}" +"%s")
